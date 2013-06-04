@@ -3,7 +3,7 @@
 @import "lib/keyframes";
 @import "lib/media";
 @import "lib/ceaser-easing/ceaser";
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,500,700);
 // gradients for ie
 $experimental-support-for-svg: true;
 
@@ -76,7 +76,7 @@ $break-large: 1180px;
     color: transparent;
 }
 
-%clr{
+@mixin clr{
   *zoom: 1;
   &:after{
     content: ".";
@@ -88,18 +88,21 @@ $break-large: 1180px;
 }
 
 // placeholder color
-@mixin placeholder($color, $font-family) {
+@mixin placeholder($color, $font-family, $font-weight) {
   &.placeholder {
     color: $color;
     font-family: $font-family;
+    font-weight: $font-weight;
   }
   &:-moz-placeholder {
     color: $color;
     font-family: $font-family;
+    font-weight: $font-weight;
   }
   &::-webkit-input-placeholder {
     color: $color;
     font-family: $font-family;
+    font-weight: $font-weight;
   }
 }
 
@@ -156,8 +159,19 @@ $break-large: 1180px;
 
 
 // fonts
-@mixin font {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'Custom font', sans-serif;
+@mixin n {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+@mixin m {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+@mixin sb {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+@mixin b {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }

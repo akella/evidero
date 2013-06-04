@@ -46,46 +46,103 @@ table {
 /* ------------------------------------- //END Reset css --------------------------------------- */
 /* ----------------------------------------- Main styles --------------------------------------- */
 body{
-    min-width: 1000px;
-    color: #474747;
-    @include font;
-    font-size: 15px;
-    line-height: 1.4;
+    min-width: 320px;
+    color: #5e564e;
+    @include m;
+    font-size: 14px;
+    line-height: 1.6;
 }
 a{
-    color:#00919e;
+    color:#5e564e;
+    text-decoration: none;
     &:hover{
-        text-decoration:none
+        text-decoration:underline;
     }
 }
 .l-layout {
-    margin: 0 auto -120px;
     position: relative;
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-}
-.push {
-    clear: both;
-    height: 120px;
+    @include clr;
 }
 .wrapper {
     overflow: hidden;
 }
 .wrap {
-    @extend %clr;
+    @include clr;
+}
+.l-container {
+    margin: 0 auto;
+    max-width: 960px;
 }
 /* ------------------------------------ //END Main styles --------------------------------------- */
  
 /* ----------------------------------------- Header --------------------------------------------- */
+.header {
+    padding: 14px 0;
+    background: #fff;
+    @include box-shadow( 0 3px 5px rgba(0,0,0,.2));
+    .l-container {
+        @include clr;
+    }
+}
+.logo {
+    @extend %hide-text;
+    float: left;
+    margin-right: 100px;
+    @include sized-sprite($icons, logo);
+}
+.menu {
+    @include clr;
+    float: left;
+    padding-top: 5px;
+    li {
+        float: left;
+        margin-right: 38px;
+    }
+}
+.search {
+    float: right;
+    padding-top: 4px;
+    .input {
+        width: 140px;
+        vertical-align: middle;
+        @include placeholder(#aeaaa6, 'Raleway', 400);
+    }
+}
+.search__btn {
+    vertical-align: middle;
+    @extend %hide-text;
+    @include sized-sprite($icons, glass);
+}
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
+.main {
+    max-width: 620px;
+}
+.input {
+    padding: 0 4px;
+    height: 25px;
+    border: 1px solid #b9b5b2;
+    background: #fff;
+    color: #5e564e;
+    @include m;
+    font-size: 14px;
+    @include box-sizing(border-box);
+    &:focus {
+        border-color: #818181;
+    }
+}
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */
 .footer {
-    position: relative;
-    height: 120px;
+    @include clr;
+    border-top: 1px solid #d6d4d2;
+    border-bottom: 1px solid #d6d4d2;
+}
+.footer__col {
+    float: left;
+    width: 50%;
+    @include box-sizing(border-box);
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
