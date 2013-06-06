@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Service list</title>
+	<title>ExpertSingle_Company</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle2.min.js"></script>
@@ -36,74 +36,37 @@
     </div>
 </header>
 <!-- END header -->
-<!-- BEGIN Map -->
-<div class="map">
-    <iframe width="100%" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?q=google+map&amp;ie=UTF8&amp;t=m&amp;z=6&amp;ll=48.382803,31.17461&amp;output=embed"></iframe>
-</div>
-<!-- END Map -->
 <div class="l-layout l-container">
     <!-- BEGIN Main -->
     <div class="main">
-        <!-- BEGIN filter -->
-        <div class="filter">
-            <div class="drop-list-wrap drop-list-wrap_width">
-                <div class="drop-list">
-                    <div class="drop-list__head js-drop-list">
-                        <span>Was</span>
-                    </div>
-                    <div class="drop-list__body js-drop-body">
-                        <p>Ihr Posteitzahlgebiet:</p>
-                        <ul>
-                            <li>0-1</li>
-                            <li>5-6</li>
-                            <li>1-2</li>
-                            <li>6-7</li>
-                            <li>2-3</li>
-                            <li>7-8</li>
-                            <li>3-4</li>
-                            <li>8-9</li>
-                            <li>4-5</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="drop-list">
-                    <div class="drop-list__head js-drop-list">
-                        <span>Wo</span>
-                    </div>
-                    <div class="drop-list__body js-drop-body">
-                        <p>Ihr Posteitzahlgebiet:</p>
-                        <ul>
-                            <li>0-1</li>
-                            <li>5-6</li>
-                            <li>1-2</li>
-                            <li>6-7</li>
-                            <li>2-3</li>
-                            <li>7-8</li>
-                            <li>3-4</li>
-                            <li>8-9</li>
-                            <li>4-5</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="gallery">
+            <h1 class="title-l-1">Kaffee im Frühling</h1>
+            <div class="cycle-slideshow" 
+                data-cycle-fx=scrollHorz
+                data-cycle-timeout=0
+                data-cycle-pager=".js-pager"
+                data-cycle-pager-template="<img src='{{src}}' width=83 height=83>"
+            >
+                <img src="http://jquery.malsup.com/cycle2/images/p1.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p2.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p3.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p1.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p2.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p3.jpg" width="600" height="340">
             </div>
-            <a href="#" class="link-map is-active"><i class="icon icon_marker"></i><span>KARTENANSICHT</span></a>
+            <!-- empty element for pager links -->
+            <div class="js-pager gallery__preview"></div>
+            <p>Service description ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+            <ul class="soc soc_horiz">
+                <li><a href="#" class="soc__fb">Facebook</a></li>
+                <li><a href="#" class="soc__tw">Twitter</a></li>
+                <li><a href="#" class="soc__gp">Google+</a></li>
+            </ul>
+            <h2 class="title-l-2">Services von Company</h2>
         </div>
-        <!-- END filter -->
         <div class="wrap">
             <!-- BEGIN Posts -->
             <ul class="post-wrap post-wrap_mod">
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren</a>
-                        </h2>
-                        <strong  class="post__author">Max Mustermann</strong>
-                        <div class="post__meta">Activity meta: Ort | Datum | Sonstiges</div>
-                    </div>
-                </li>
                 <li class="post">
                     <a href="#">
                         <img src="http://lorempixel.com/290/163/food" alt="">
@@ -120,18 +83,6 @@
             <!-- BEGIN Posts -->
             <!-- BEGIN Posts -->
             <ul class="post-wrap post-wrap_mod">
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
-                        </h2>
-                        <strong  class="post__author">Max Mustermann</strong>
-                        <div class="post__meta">Activity meta: Ort | Datum | Sonstiges</div>
-                    </div>
-                </li>
                 <li class="post">
                     <a href="#">
                         <img src="http://lorempixel.com/290/163/food" alt="">
@@ -148,16 +99,69 @@
             <!-- BEGIN Posts -->
         </div>
         <!-- BEGIN Pagin -->
-        <div class="pagin">
-            <a href="#" class="pagin__prev">&lt;</a>
-            <a href="#">1</a>
-            <a href="#" class="is-active">2</a>
-            <a href="#">3</a>
-            <a href="#">...</a>
-            <a href="#">9</a>
-            <a href="#" class="pagin__next">&gt;</a>
+        <div class="wrapper">
+            <div class="contacts-wrap">
+                <h2 class="title-l-2">Kontakt</h2>
+                <div>
+                    <div class="contact">
+                        <div class="contact__map">
+                            <div class="contact__address">
+                                <p>Musterfirma</p>
+                                <p>Musterstraße 1</p>
+                                <p>12345 Musterstadt</p>
+                            </div>
+                        </div>
+                        <a href="#" class="contact__link">Jetzt Nachricht schreiben</a>
+                    </div>
+                    <div class="contact">
+                        <div class="contact__map">
+                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?q=google+map&amp;ie=UTF8&amp;ll=48.382803,31.17461&amp;spn=25.067099,67.631836&amp;t=m&amp;z=5&amp;output=embed"></iframe>
+                        </div>
+                        <a href="#" class="contact__link">... oder anrufen unter 0221 - 123 45 67</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- END Pagin -->
+        <div class="soc-like">
+            <img src="img/soc-like.png" alt="">
+        </div>
+        <h2 class="title-l-2">Artikel von Company</h2>
+        <ul class="post-wrap post-wrap_small">
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+        </ul>
+        <!-- BEGIN Posts -->
         <!-- BEGIN Footer -->
         <footer class="footer">
             <div class="footer__col">
@@ -248,12 +252,7 @@
             </div>
         </div>
         <div class="tab-cont js-tab1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            
         </div>
         <div class="tab-cont js-tab2">
             <ul class="pop-list">
