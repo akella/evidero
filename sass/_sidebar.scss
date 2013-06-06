@@ -172,3 +172,33 @@
         }
     }
 }
+
+.pop-list {
+    
+}
+.pop {
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #d6d4d2;
+    @include clr;
+    @include b;
+    font-size: 16px;
+    .categ-name {
+        display: block;
+    }
+    a {
+       @include b;
+        font-size: 16px; 
+    }
+    &:first-child {
+        border-top: 0;
+    }
+    img {
+        float: right;
+        margin-top: 9px;
+    }
+}
+.pop__main {
+    float: left;
+    width: 200px;
+}
