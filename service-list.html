@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Experts</title>
+	<title>Service list</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle2.min.js"></script>
@@ -25,7 +25,7 @@
                 <li><a href="#">bewegen</a></li>
                 <li><a href="#">denken</a></li>
                 <li><a href="#">erholen</a></li>
-                <li class="is-active"><a href="#">essen & trinken</a></li>
+                <li><a href="#">essen & trinken</a></li>
                 <li><a href="#">verändern</a></li>                        
             </ul>
         </nav>
@@ -36,32 +36,11 @@
     </div>
 </header>
 <!-- END header -->
-<!-- BEGIN Big slider -->
-<div class="big-slider slider">
-    <div class="cycle-slideshow" 
-        data-cycle-fx=scrollHorz
-        data-cycle-slides="> .big-slider__item"
-        data-cycle-timeout=3000
-        data-cycle-next=".js-next-slide"
-        data-cycle-prev=".js-prev-slide"
-        >
-        <div class="big-slider__item" style="background: url(http://lorempixel.com/1920/200/nature);">
-            <div class="l-container">
-                <div class="big-slider__title">
-                    <span>essen & trinken</span>
-                </div>
-                <a href="#" class="big-slider__link">Experte werden?</a>
-            </div>
-        </div>
-    </div>
-   <!--  <div class="l-container">
-        <div class="slider__nav">
-            <button class="slider__prev js-prev-slide">&lt;</button>
-            <button class="slider__next js-next-slide">&gt;</button>
-        </div>
-    </div> -->
+<!-- BEGIN Map -->
+<div class="map">
+    <iframe width="100%" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?q=google+map&amp;ie=UTF8&amp;t=m&amp;z=6&amp;ll=48.382803,31.17461&amp;output=embed"></iframe>
 </div>
-<!-- END Big slider -->
+<!-- END Map -->
 <div class="l-layout l-container">
     <!-- BEGIN Main -->
     <div class="main">
@@ -107,115 +86,74 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="link-map"><i class="icon icon_marker"></i><span>KARTENANSICHT</span></a>
+            <a href="#" class="link-map is-active"><i class="icon icon_marker"></i><span>KARTENANSICHT</span></a>
         </div>
         <!-- END filter -->
         <div class="wrap">
-            <ul class="expert-post-wrap l-col">
-                <li class="expert-post">
-                    <div class="expert-post__head">
-                        <a href="#"><img src="http://lorempixel.com/80/80/people" alt=""></a>
-                        <a href="#">Clifford Opoku-Afari</a>
-                        <span>Fitnesstrainer</span>
-                    </div>
-                    <ul class="expert-post__body">
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner 
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner Dom auf dem Kölner Domtig auf die Fresse
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner Dom auf dem 
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="expert-post__footer">
-                        <a href="#">4 Angebote</a>
-                        <a href="#">2 Beiträge</a>
+            <!-- BEGIN Posts -->
+            <ul class="post-wrap post-wrap_mod">
+                <li class="post">
+                    <a href="#">
+                        <img src="http://lorempixel.com/290/163/food" alt="">
+                    </a>
+                    <div class="post__main">
+                        <span class="categ-name">ERNÄHRUNG</span>
+                        <h2 class="post__title">
+                            <a href="#">Besser kommunizieren</a>
+                        </h2>
                     </div>
                 </li>
-                <li class="expert-post">
-                    <div class="expert-post__head">
-                        <a href="#"><img src="http://lorempixel.com/80/80/people" alt=""></a>
-                        <a href="#">Clifford Opoku-Afari</a>
-                        <span>Fitnesstrainer</span>
-                    </div>
-                    <ul class="expert-post__body">
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner 
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="expert-post__footer">
-                        <a href="#">4 Angebote</a>
-                        <a href="#">2 Beiträge</a>
+                <li class="post">
+                    <a href="#">
+                        <img src="http://lorempixel.com/290/163/food" alt="">
+                    </a>
+                    <div class="post__main">
+                        <span class="categ-name">ERNÄHRUNG</span>
+                        <h2 class="post__title">
+                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                        </h2>
                     </div>
                 </li>
             </ul>
-            <ul class="expert-post-wrap l-col">
-                <li class="expert-post">
-                    <div class="expert-post__head">
-                        <a href="#"><img src="http://lorempixel.com/80/80/people" alt=""></a>
-                        <a href="#">Clifford Opoku-Afari</a>
-                        <span>Fitnesstrainer</span>
-                    </div>
-                    <ul class="expert-post__body">
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner 
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung 
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="expert-post__footer">
-                        <a href="#">4 Angebote</a>
-                        <a href="#">2 Beiträge</a>
+            <!-- BEGIN Posts -->
+            <!-- BEGIN Posts -->
+            <ul class="post-wrap post-wrap_mod">
+                <li class="post">
+                    <a href="#">
+                        <img src="http://lorempixel.com/290/163/food" alt="">
+                    </a>
+                    <div class="post__main">
+                        <span class="categ-name">ERNÄHRUNG</span>
+                        <h2 class="post__title">
+                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                        </h2>
                     </div>
                 </li>
-                <li class="expert-post">
-                    <div class="expert-post__head">
-                        <a href="#"><img src="http://lorempixel.com/80/80/people" alt=""></a>
-                        <a href="#">Clifford Opoku-Afari</a>
-                        <span>Fitnesstrainer</span>
-                    </div>
-                    <ul class="expert-post__body">
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner 
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#"><img src="http://lorempixel.com/70/40/people" alt=""></a>
-                            <div>
-                                Parcours-Einführung auf dem Kölner Dom auf dem Kölner Domtig auf die Fresse
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="expert-post__footer">
-                        <a href="#">4 Angebote</a>
-                        <a href="#">2 Beiträge</a>
+                <li class="post">
+                    <a href="#">
+                        <img src="http://lorempixel.com/290/163/food" alt="">
+                    </a>
+                    <div class="post__main">
+                        <span class="categ-name">ERNÄHRUNG</span>
+                        <h2 class="post__title">
+                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                        </h2>
                     </div>
                 </li>
             </ul>
+            <!-- BEGIN Posts -->
         </div>
+        <!-- BEGIN Pagin -->
+        <div class="pagin">
+            <a href="#" class="pagin__prev">&lt;</a>
+            <a href="#">1</a>
+            <a href="#" class="is-active">2</a>
+            <a href="#">3</a>
+            <a href="#">...</a>
+            <a href="#">9</a>
+            <a href="#" class="pagin__next">&gt;</a>
+        </div>
+        <!-- END Pagin -->
         <!-- BEGIN Footer -->
         <footer class="footer">
             <div class="footer__col">
@@ -306,6 +244,12 @@
             </div>
         </div>
         <div class="tab-cont js-tab1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
         <div class="tab-cont js-tab2">
             <ul class="pop-list">
@@ -427,6 +371,7 @@
             </ul>
             <!-- END Expert -->
         </div>
+        <a href="#" class="simple-link">Zur Expertensuche</a>
         <a href="#" class="banner">
             <img src="http://lorempixel.com/300/250/food" alt="">
         </a>

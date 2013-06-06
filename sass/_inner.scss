@@ -1,4 +1,9 @@
 @import "base";
+.content {
+    p {
+        margin: 22px 0;
+    }
+}
 .filter {
     @include clr;
     margin-bottom: 4%;
@@ -24,6 +29,9 @@
     .icon {
         margin-right: 7px;
     }
+}
+.link-map.is-active {
+    background: #97be0f;
 }
 .expert-post {
     margin-bottom: 3%;
@@ -80,5 +88,11 @@
         &:first-child {
             margin-right: 10%;
         }
+    }
+}
+
+.map {
+    iframe {
+        display: block;
     }
 }

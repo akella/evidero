@@ -1,0 +1,266 @@
+<!doctype html>
+<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contacts</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.carousel.min.js"></script>
+    <script src="js/jquery.cycle2.swipe.min.js"></script>
+    <script src="js/common.js"></script>  
+    <!--[if lt IE 9]> 
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+    <![endif]-->
+</head>
+<body>
+<!-- BEGIN header -->
+<header class="header">
+    <div class="l-container">
+        <a href="#" class="logo">Evidero</a>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">bewegen</a></li>
+                <li><a href="#">denken</a></li>
+                <li><a href="#">erholen</a></li>
+                <li><a href="#">essen & trinken</a></li>
+                <li><a href="#">verändern</a></li>                        
+            </ul>
+        </nav>
+        <div class="search">
+            <input class="input" type="text" placeholder="Suche ...">
+            <input class="search__btn" type="submit" value="Go">
+        </div>
+    </div>
+</header>
+<!-- END header -->
+<div class="l-layout l-container">
+    <!-- BEGIN Main -->
+    <div class="main">
+        <h1 class="title-l-1">Kontakt</h1>
+        <article class="content">
+            <p>Sie haben Fragen, Anregungen oder Kommentare zu evidero? Nutzen Sie unser Kontaktformular und lassen Sie uns eine Nachricht zukommen.</p>
+            <p> Wir freuen uns auf Ihre Nachricht.</p>
+        </article>
+        <form>
+            <div class="wrap">
+                <div class="l-col">
+                    <div class="input-wrap">
+                        <input class="input" type="text" placeholder="Vorname *">
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input" type="text" placeholder="Email *">
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input is-valid-ok" type="text" placeholder="Firma">
+                    </div>
+                </div>
+                <div class="l-col">
+                    <div class="input-wrap">
+                        <input class="input" type="text" placeholder="Nachname *">
+                    </div>
+                    <div class="input-wrap">
+                        <input class="input is-valid-error" type="text" placeholder="Telefon*">
+                    </div>
+                </div>
+            </div>
+            <div class="input-wrap">
+                <textarea class="input textarea" placeholder="Nachricht *"></textarea>
+            </div>
+            <div class="input-wrap input-wrap_send">
+                <img class="ajax-loader is-loading" src="img/ajax-loader.gif" alt="">
+                <input class="btn btn_big" type="submit" value="Abschicken">
+            </div>
+            <div class="clr"></div>
+            <div class="message message_ok">
+                success message (Success message)
+            </div>
+            <div class="message message_error">
+                Please enter a valid telephone number! (Error message)
+            </div>
+        </form>
+        <!-- BEGIN Footer -->
+        <footer class="footer">
+            <div class="footer__col">
+                <strong class="footer__title">Kategorien</strong>
+                <ul class="footer__nav">
+                    <li><a href="#">bewegen</a></li>
+                    <li><a href="#">denken</a></li>
+                    <li><a href="#">erholen</a></li>
+                    <li><a href="#">essen & trinken</a></li>
+                    <li><a href="#">verändern</a></li>
+                </ul>
+                <strong class="footer__title">Kontakt</strong>
+                <ul class="soc">
+                    <li><a href="#" class="soc__em">E-Mail</a></li>
+                    <li><a href="#" class="soc__gp">Google+</a></li>
+                    <li><a href="#" class="soc__fb">Facebook</a></li>
+                    <li><a href="#" class="soc__yt">YouTube</a></li>
+                    <li><a href="#" class="soc__tw">Twitter</a></li>
+                    <li><a href="#" class="soc__pt">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <strong class="footer__title">evidero</strong>
+                <ul class="footer__nav">
+                    <li><a href="#">Über Uns </a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Werbung</a></li>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                </ul>
+                <strong class="footer__title">evidero-Newsletter</strong>
+                <p>Lorem ipsum dolor sit amet, consect etuer adipiscing elit commodo ligula eget dolor. </p>
+                <div class="footer__form">
+                    <input class="input" type="text" placeholder="eMail-Adresse">
+                    <input class="btn" type="submit" value="anmelden">
+                </div>
+            </div>
+            <div class="copyright">Alle  Rechte vorbehalten © 2013 KNDM GmbH</div>
+        </footer>
+        <!-- END Footer -->
+    </div>
+    <!-- END Main -->
+    <!-- BEGIN sidebar -->
+    <aside class="sidebar">
+        <ul class="tab">
+            <li data-tab=".js-tab1"><i class="icon icon_clock"></i><span>AKTUELL</span></li>
+            <li data-tab=".js-tab2"><i class="icon icon_heard"></i><span>BELIEBT</span></li>
+            <li data-tab=".js-tab3"><i class="icon icon_man"></i><span>EXPERTEN</span></li>
+        </ul>
+        <div class="tab-cont js-tab1">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="tab-cont js-tab2">
+            <ul class="pop-list">
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+                <li class="pop">
+                    <div class="pop__main">
+                        <span class="categ-name">KOMMUNIKATION</span>
+                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    </div>
+                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-cont js-tab3">
+            <!-- BEGIN Expert -->
+            <ul class="expert expert_vertical">
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+                <li class="expert__item">
+                    <a href="#" class="expert__link">
+                        <img src="http://lorempixel.com/80/80/people" alt="">
+                        <div class="expert__main">
+                            <strong class="expert__name">Burkhard Hirsch</strong>
+                            FDP-Politiker
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <!-- END Expert -->
+        </div>
+    </aside>
+    <!-- END sidebar -->
+    <i class="l-layout__border"></i>
+</div>
+</body>
+</html>

@@ -137,6 +137,7 @@ a{
     float: right;
     padding-top: 4px;
     .input {
+        display: inline-block;
         width: 140px;
         vertical-align: middle;
         @include placeholder(#aeaaa6, 'Raleway', 400);
@@ -171,7 +172,31 @@ a{
     @include b;
     text-transform: uppercase;
 }
+.input-wrap {
+    position: relative;
+    margin: 0 0 14px;
+    @include clr;
+}
+.input-wrap_send {
+    float: right;
+    width: 48%;
+    .btn {
+        width: 100%;
+    }
+}
+.ajax-loader {
+    display: none;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    margin-top: -8px;
+}
+.is-loading.ajax-loader  {
+     display: block;
+}
 .input {
+    display: block;
+    width: 100%;
     padding: 0 4px;
     height: 25px;
     border: 1px solid #b9b5b2;
@@ -183,6 +208,23 @@ a{
     &:focus {
         border-color: #818181;
     }
+}
+.is-valid-error {
+    border-color: #ff5050;
+    &:focus {
+        border-color: #ff5050;
+    }
+}
+.is-valid-ok {
+    border-color: #97be0f;
+    &:focus {
+        border-color: #97be0f;
+    }
+}
+.textarea {
+    resize: vertical;
+    padding: 10px;
+    min-height: 114px;
 }
 .btn {
     padding: 0 10px;
@@ -199,6 +241,25 @@ a{
     &:active {
         background: #9a9794;
     }
+}
+.btn_big {
+    height: 30px;
+    font-size: 14px;
+}
+.message {
+    margin: 0 0 14px;
+    font-size: 12px;
+    padding: 2.5% 3.3%;
+    @include box-sizing(border-box); 
+    border: 1px solid #d6d4d2;
+}
+.message_ok {
+    color: #97be0f;
+    border-color: #97be0f;
+}
+.message_error {
+    color: #ff5050;
+    border-color: #ff5050;
 }
 
 .simple-link {
