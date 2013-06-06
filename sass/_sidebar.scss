@@ -7,6 +7,9 @@
     padding: 0 20px;
     @include box-sizing(border-box);
     background: #fff;
+    .drop-list__head {
+        border-top: 0;
+    }
 }
 .banner {
     display: block;
@@ -95,83 +98,7 @@
 .tab-cont {
     display: none;
 }
-.drop-list-wrap {
-    position: relative;
-    height: 42px;
-    .is-active {
-        z-index: 2;
-        @include box-shadow(0 0 5px rgba(94,86,78,.5));
-        .drop-list__head {
-            border-color: #fff;
-            color: #5e564e;
-            z-index: 2;
-            &:after {
-                @include opacity(1);
-            }
-        }
-    }
-}
-.drop-list {
-    position: absolute;
-    width: 150px;
-    top: 0;
-    right: 0;
-    background: #fff;
-    @include box-sizing(border-box);
-    &:first-child {
-        left: 0;
-        right: auto;
-        width: 151px;
-    }
-}
-.drop-list__head {
-    position: relative;
-    height: 42px;
-    padding: 7px 35px 6px 11px;
-    background: #fff;
-    border: 1px solid #d6d4d2;
-    border-top: 0;
-    cursor: pointer;
-    color: #aeaaa6;
-    font-size: 18px;
-    @include box-sizing(border-box);
-    @include b;
-    &:after {
-        content: "";
-        position: absolute;
-        right: 11px;
-        top: 50%;
-        margin-top: -5px;
-        @include opacity(.5);
-        @include sized-sprite($icons, arr);
-    }
-    &:hover {
-        color: #5e564e;
-        &:after {
-            @include opacity(1);
-        }
-    }
-}
-.drop-list__body {
-    padding: 0 10px 14px;
-    background: #fff;
-    font-size: 12px;
-    ul {
-        @include clr;
-    }
-    li {
-        float: left;
-        margin-bottom: -3px;
-        width: 50%;
-        font-size: 18px;
-        @include b;
-        cursor: pointer;
-        text-align: center;
-        &:hover {
-            color: #97be0f;
-        }
-    }
-}
+
 
 .pop-list {
     

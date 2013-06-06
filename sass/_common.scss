@@ -229,7 +229,7 @@ a{
     width: 48%;
     @include transition(all 200ms linear);
     &:nth-child(2n) {
-        margin-left: 2.4%;
+        margin-left: 3.2%;
     }
     &:hover {
         position: relative;
@@ -294,7 +294,7 @@ a{
     width: 48%;
     margin-bottom: 3.7%;
     &:nth-child(2n) {
-        margin-left: 2.4%;
+        margin-left: 3.2%;
     }
     img {
         float: left;
@@ -334,6 +334,9 @@ a{
         width: 100%;
         margin-bottom: 6.7%;
         border-top: 1px solid #d6d4d2;
+        &:first-child {
+            border-top: 0;
+        }
         &:nth-child(2n) {
             margin-left: 0;
         }
@@ -393,6 +396,96 @@ a{
 .icon_clock {@include sized-sprite($icons,clock);}
 .icon_heard {@include sized-sprite($icons,heard);}
 .icon_man {@include sized-sprite($icons,man);}
+.icon_marker {@include sized-sprite($icons,marker);}
+
+
+.drop-list-wrap {
+    position: relative;
+    height: 42px;
+    .is-active {
+        z-index: 2;
+        @include box-shadow(0 0 5px rgba(94,86,78,.5));
+        .drop-list__head {
+            border-color: #fff;
+            color: #5e564e;
+            z-index: 2;
+            &:after {
+                @include opacity(1);
+            }
+        }
+    }
+}
+.drop-list {
+    position: absolute;
+    width: 150px;
+    top: 0;
+    right: 0;
+    background: #fff;
+    @include box-sizing(border-box);
+    &:first-child {
+        left: 0;
+        right: auto;
+        width: 151px;
+    }
+}
+.drop-list__head {
+    position: relative;
+    height: 36px;
+    padding: 4px 35px 6px 11px;
+    background: #fff;
+    border: 1px solid #d6d4d2;
+    cursor: pointer;
+    color: #aeaaa6;
+    font-size: 18px;
+    @include box-sizing(border-box);
+    @include b;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 11px;
+        top: 50%;
+        margin-top: -5px;
+        @include opacity(.5);
+        @include sized-sprite($icons, arr);
+    }
+    &:hover {
+        color: #5e564e;
+        &:after {
+            @include opacity(1);
+        }
+    }
+}
+.drop-list__body {
+    padding: 0 10px 14px;
+    background: #fff;
+    font-size: 12px;
+    ul {
+        @include clr;
+    }
+    li {
+        float: left;
+        margin-bottom: -3px;
+        width: 50%;
+        font-size: 18px;
+        @include b;
+        cursor: pointer;
+        text-align: center;
+        &:hover {
+            color: #97be0f;
+        }
+    }
+}
+
+.drop-list-wrap_width {
+    width: 65%;
+    .drop-list {
+        width: 48%;
+        &:first-child {
+            width: 48%;
+        }
+    }
+}
+
 /* ---------------------------------- //END Independent blocks ----------------------------------- */
 
 /* ----------------------------------------- Footer ---------------------------------------------- */

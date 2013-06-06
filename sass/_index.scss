@@ -49,6 +49,16 @@
         font-size: 60px;
     }
 }
+.big-slider__link {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    font-size: 20px;
+    @include b;
+    color: #fff;
+    line-height: 1.2;
+    text-decoration: underline;
+}
 .info-item {
     color: #fff;
     line-height: 1.3;
