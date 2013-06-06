@@ -219,18 +219,16 @@ a{
     }
 }
 
-.post-wrap {
-    
-}
-.post {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 0 3.3%;
+.post-wrap, .l-col {
+    float: right;
     width: 48%;
-    @include transition(all 200ms linear);
-    &:nth-child(2n) {
-        margin-left: 3.2%;
+    &:first-child {
+        float: left;
     }
+}
+.post {    
+    margin: 0 0 7.3%;
+    @include transition(all 200ms linear);
     &:hover {
         position: relative;
         z-index: 2;

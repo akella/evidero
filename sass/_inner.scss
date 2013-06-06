@@ -26,18 +26,12 @@
     }
 }
 .expert-post {
-    display: inline-block;
-    vertical-align: top;
     margin-bottom: 3%;
-    width: 48%;
     @include box-sizing(border-box);
     border: 1px solid #d6d4d2;
     @include transition(all 200ms linear);
     &:hover {
         @include box-shadow(0 0 10px rgba(94,86,78,.5));
-    }
-    &:nth-child(2n) {
-        margin-left: 3.2%;
     }
 }
 .expert-post__head {
