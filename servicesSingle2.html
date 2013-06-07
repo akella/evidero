@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>servicesSingle</title>
+	<title>servicesSingle 2</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle2.min.js"></script>
@@ -49,25 +49,100 @@
             <div class="soc-like">
                 <img src="img/soc-like.png" alt="">
             </div>
-            <a href="#" class="content-nav__next">Nächster Artikel  <span>></span></a>
+            <!-- <a href="#" class="content-nav__next">Nächster Artikel  <span>></span></a> -->
         </div>
-        <div class="post-preview">
-            <img src="http://lorempixel.com/600/335/people" alt="">
-            <span class="img-copyright"> © Image Source</span>
+        <div class="gallery">
+            <div class="cycle-slideshow" 
+                data-cycle-fx=scrollHorz
+                data-cycle-timeout=0
+                data-cycle-pager=".js-pager"
+                data-cycle-pager-template="<img src='{{src}}' width=83 height=83>"
+            >
+                <img src="http://jquery.malsup.com/cycle2/images/p1.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p2.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p3.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p1.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p2.jpg" width="600" height="340">
+                <img src="http://jquery.malsup.com/cycle2/images/p3.jpg" width="600" height="340">
+            </div>
+            <!-- empty element for pager links -->
+            <div class="js-pager gallery__preview"></div>
         </div>
         <article class="content">
+            <p>Service description ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
             <p>Der Filterkaffee erlebt gerade sein Comeback. Lange Zeit hatte er einen verstaubten Ruf und rückte durch den <a href="#">Espresso-Hype</a> in den Hintergrund. Jetzt wird er wieder beliebter. In den größeren Städten merkt man das schon. Es ist aber mit einigem Aufwand verbunden, einen guten Filterkaffee zu brühen. Deshalb neigen leider viele Gastronomen dazu, den Kaffee schneller und damit schlechter zuzubereiten.</p>
             <h6>Kaffee wird immer getrunken</h6>
             <p>Wenn sich abzeichnet, dass der Winter vorüber geht, fragen die Leute an meinem Stand immer, ob nun weniger Kaffee getrunken wird, wenn es warm wird. Aber das kann ich überhaupt nicht bestätigen. Gerade im Frühling oder Sommer sind alle draußen, dann kommen sie an meinem Stand vorbei und trinken Kaffee — egal, ob es 25 oder 30 Grad sind.</p>
             <p>Ich biete zwar auch Eiskaffee an, aber die Nachfrage danach ist nicht so hoch, wie man vielleicht denken mag. Ich mache meinen Eiskaffee auch ein bisschen anders, als es sonst der Fall ist. Klassischerweise wird Vanille-Eis benutzt, ich mache stattdessen eine Vanille-Creme, die ich auch für Törtchen benutze. </p>
-            <div class="content-info">Veröffentlicht am 01.02.2013</div>
+            <h2 class="title-l-2">Auf einen Blick</h2>
+            <div class="wrapper">
+                <ul>
+                    <li>Service description ipsum dolor sit amet,  consectetuer adipiscing elit.</li> 
+                    <li>Aenean commodo ligula eget dolor.</li> 
+                    <li>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient  montes, nascetur ridiculus mus</li>
+                    <li> Donec quam felis, ultricies nec</li>
+                </ul>
+                <div class="contact">
+                    <div class="contact__map">
+                        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ua/maps?q=google+map&amp;ie=UTF8&amp;ll=48.382803,31.17461&amp;spn=25.067099,67.631836&amp;t=m&amp;z=5&amp;output=embed"></iframe>
+                    </div>
+                    <a href="#" class="contact__marker"><i class="icon icon_marker2"></i><span>usterstraße 1, 12345 Musterstadt</span></a>
+                </div>
+            </div>
+            <h2 class="title-l-2">Anfragen</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
         </article>
+        <div class="wrapper">
+            <div class="contacts-wrap contacts-wrap_mod">
+                <div>
+                    <div class="contact">
+                        <a data-show=".js-form" href="#" class="contact__link js-link-form">Jetzt Nachricht schreiben</a>
+                    </div>
+                    <div class="contact">
+                        <a href="#" class="contact__link">... oder anrufen unter 0221 - 123 45 67</a>
+                    </div>
+                </div>
+                <div class="contact-form js-form">
+                    <strong class="contact-form__title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong>
+                    <form>
+                        <div class="wrap">
+                            <div class="l-col">
+                                <div class="input-wrap">
+                                    <input class="input" type="text" placeholder="Name *">
+                                </div>
+                                <div class="input-wrap">
+                                    <input class="input" type="text" placeholder="Email *">
+                                </div>
+                                <div class="input-wrap">
+                                    <input class="input" type="text" placeholder="Telefon*">
+                                </div>
+                            </div>
+                            <div class="l-col">
+                                <div class="input-wrap">
+                                    <textarea class="input textarea" placeholder="Nachricht *"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-wrap input-wrap_send">
+                            <img class="ajax-loader is-loading" src="img/ajax-loader.gif" alt="">
+                            <input class="btn btn_big" type="submit" value="Abschicken">
+                        </div>
+                        <div class="message message_ok">
+                            success message (Success message)
+                        </div>
+                        <div class="message message_error">
+                            Please enter a valid telephone number! (Error message)
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <div class="content-nav">
             <!-- <a href="#" class="content-nav__prev"><span><</span> Nächster Artikel</a> -->
             <div class="soc-like">
                 <img src="img/soc-like.png" alt="">
             </div>
-            <a href="#" class="content-nav__next">Nächster Artikel  <span>></span></a>
+            <!-- <a href="#" class="content-nav__next">Nächster Artikel  <span>></span></a> -->
         </div>
         <div class="info-widget">
             <a href="#"><img src="http://lorempixel.com/120/120/people" alt=""></a>
@@ -114,107 +189,42 @@
                 </div>
             </li>
         </ul>
-        <!-- BEGIN Posts -->
         <h2 class="title-l-2">Artikel von Experte</h2>
-        <!-- BEGIN Comments -->
-        <div class="comments">
-            <div class="comments__sort">Sortiere nach:   <a href="#" class="is-active">Datum</a>   <a href="#">Wertung</a>   <a href="#">Letzte Aktivität</a></div>
-            <ul class="comments__wrap">
-                <li class="comments__item">
-                    <a href="#"><img src="http://lorempixel.com/48/48/people" alt=""></a>
-                    <div class="comments__main">
-                        <div class="comments__main-wrap">
-                            <div class="comments__meta">
-                                <a href="#">wieliczek joerg </a>
-                                <span>(vor 1 Woche) </span>
-                                <a href="#" class="comments__answer-link"><i></i>Antworten</a>
-                            </div>
-                            <div class="comments__text">
-                                <p>Wo ist Richy Müller aufgewachsen ? In Mannheim ? </p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="comments__item">
-                    <a href="#"><img src="http://lorempixel.com/48/48/people" alt=""></a>
-                    <div class="comments__main">
-                        <div class="comments__main-wrap">
-                            <div class="comments__meta">
-                                <a href="#">wieliczek joerg </a>
-                                <span>(vor 1 Woche) </span>
-                                <a href="#" class="comments__answer-link"><i></i>Antworten</a>
-                            </div>
-                            <div class="comments__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="comments__item is-level-2">
-                    <a href="#"><img src="http://lorempixel.com/48/48/people" alt=""></a>
-                    <div class="comments__main">
-                        <div class="comments__main-wrap">
-                            <div class="comments__meta">
-                                <a href="#">wieliczek joerg </a>
-                                <span>(vor 1 Woche) </span>
-                                <a href="#" class="comments__answer-link"><i></i>Antworten</a>
-                            </div>
-                            <div class="comments__text">
-                                <p>
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="comments__item is-level-3">
-                    <a href="#"><img src="http://lorempixel.com/48/48/people" alt=""></a>
-                    <div class="comments__main">
-                        <div class="comments__main-wrap">
-                            <div class="comments__meta">
-                                <a href="#">wieliczek joerg </a>
-                                <span>(vor 1 Woche) </span>
-                                <a href="#" class="comments__answer-link"><i></i>Antworten</a>
-                            </div>
-                            <div class="comments__text">
-                                <p>
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <h2>Schreibe einen neuen Kommentar</h2>
-            <div class="input-wrap">
-                <textarea class="textarea input" placeholder="Dein Kommentar"></textarea>
-            </div>
-            <div class="enter">
-                <div class="enter-soc">
-                    <div class="enter__title">Anmelden mit</div>
-                    <a href="#" class="enter-cos__fb"></a>
-                    <a href="#" class="enter-cos__tw"></a>
-                    <a href="#" class="enter-cos__gp"></a>
+        <ul class="post-wrap post-wrap_small">
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
                 </div>
-                <div class="enter__form">
-                    <div class="enter__title">oder als Gast kommentieren</div>
-                    <div>
-                        <input type="text" class="input" placeholder="Dein Name">
-                        <input type="text" class="input" placeholder="Deine Email-Adresse ">
-                    </div>
+            </li>
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
                 </div>
-                <div class="enter__text">Kleingedrucktes und Rechtliches zum Thema Kommentare. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </div>
-                <div class="input-wrap">
-                    <button class="btn" type="submit"><i class="icon icon_comment"></i>Kommentar absenden</button>
+            </li>
+            <li class="post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">KOMMUNIKATION</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
                 </div>
-            </div>
-        </div>
-        <!-- END Comments -->
+            </li>
+        </ul>
         <!-- BEGIN Footer -->
         <footer class="footer">
             <div class="footer__col">

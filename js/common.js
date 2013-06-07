@@ -35,4 +35,14 @@ $(document).ready(function() {
             this_list_body.slideDown("fast");
         }
     });
+
+// show contact form 
+    $(".js-form").hide();
+    $(".js-link-form").click(function(){
+        $(this).toggleClass('is-active');
+        var index = $(this).attr("data-show");
+        $(index).slideToggle("fast");
+        return false;
+    });
+
 });

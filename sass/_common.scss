@@ -162,7 +162,7 @@ a{
     font-weight: normal;
 }
 .title-l-2 {
-    margin-bottom: 3%;
+    margin: 3% 0;
     font-size: 20px;
     @include b;
 }
@@ -248,6 +248,7 @@ a{
     font-size: 14px;
 }
 .message {
+    clear: both;
     margin: 0 0 14px;
     font-size: 12px;
     padding: 2.5% 3.3%;
@@ -513,6 +514,8 @@ a{
 .icon_heard {@include sized-sprite($icons,heard);}
 .icon_man {@include sized-sprite($icons,man);}
 .icon_marker {@include sized-sprite($icons,marker);}
+.icon_marker2 {@include sized-sprite($icons,marker2);}
+.icon_comment {@include sized-sprite($icons,comment);}
 
 
 .drop-list-wrap {
@@ -598,6 +601,135 @@ a{
         width: 48%;
         &:first-child {
             width: 48%;
+        }
+    }
+}
+
+.comments {
+    padding-bottom: 8%;
+}
+.comments__sort {
+    font-size: 12px;
+    a {
+        display: inline-block;
+        margin: 0 5px;
+    }
+    .is-active {
+        @include b;
+    }
+}
+.comments__wrap {
+    .is-level-2 {
+        margin-left: 72px;
+    }
+    .is-level-3,
+    .is-level-4,
+    .is-level-5,
+    .is-level-6 {
+        margin-left: 144px;
+    }
+}
+.comments__item {
+    @include clr;
+    margin-bottom: 17px;
+    img {
+        float: left;
+        margin-right: 10px;
+        border: 1px solid #aeaaa6;
+        display: block;
+    }
+}
+.comments__main {
+    overflow: hidden;
+    padding: 0 0 1px 2%;
+}
+.comments__main-wrap {
+    position: relative;
+    padding: 3%;
+    border: 1px solid #d6d4d2;
+    &:before {
+        content: "";
+        position: absolute;
+        left: -11px;
+        top: 16px;
+        @include sized-sprite($icons, arr2); 
+    }
+}
+.comments__meta {
+    @include clr;
+    font-size: 12px;
+    margin-bottom: 5px;
+    a {
+        @include b;
+    }
+    span {
+        color: #aeaaa6;
+    }
+    .comments__answer-link {
+        float: right;
+        font-size: 12px;
+        color: #aeaaa6;
+        i {
+            display: inline-block;
+            @include sized-sprite($icons, answer); 
+        }
+    }
+}
+
+.comments__text {
+    font-size: 12px;
+}
+
+.enter {
+    @include clr;
+    .enter-soc {
+        float: left;
+        width: 30%;
+    }
+    .btn {
+        position: relative;
+        padding: 0 3%;
+        float: right;
+        height: 28px;
+        line-height: 28px;
+        overflow: visible;
+        .icon {
+            vertical-align: middle;
+            margin-right: 7px;
+        } 
+    }
+}
+.enter__title {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 12px;
+    @include b;
+}
+.enter-soc {
+    a {
+        display: inline-block;
+    }
+}
+.enter__text {
+    clear: both;
+    padding-top: 5px;
+    margin-bottom: 2%;
+    font-size: 11px;
+}
+.enter-cos__fb {@include sized-sprite($icons, fb2);} 
+.enter-cos__tw {@include sized-sprite($icons, tw2);}
+.enter-cos__gp {@include sized-sprite($icons, gp2);}
+
+.enter__form {
+    float: right;
+    width: 70%;
+    @include clr;
+    .input {
+        float: right;
+        width: 48%;
+        height: 28px;
+        &:first-child {
+            float: left;
         }
     }
 }
