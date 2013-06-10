@@ -1,6 +1,9 @@
 @import "base";
 .big-slider {
     position: relative;
+    @include respond-to(width_600) {
+        display: none;
+    }
     .l-container {
         position: relative;
         height: 1px;
@@ -15,6 +18,9 @@
             background: #97be0f;
             color: #fff;
             border: 0;
+        }
+        @include respond-to(width_920) {
+            display: none;
         }
     }
 }
@@ -64,6 +70,9 @@
     line-height: 1.3;
     background: #97be0f;
     @include clr;
+    @include respond-to(width_920) {
+        display: none;
+    }
     a {
         @include b;
         font-size: 12px;

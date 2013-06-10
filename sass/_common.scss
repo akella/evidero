@@ -51,6 +51,12 @@ body{
     @include m;
     font-size: 14px;
     line-height: 1.6;
+    @include respond-to(width_920) {
+        padding-top: 61px;
+    }
+    @include respond-to(width_600) {
+        font-size: 12px;
+    }
 }
 a{
     color:#5e564e;
@@ -63,6 +69,9 @@ a{
     position: relative;
     @include clr;
     padding-top: 40px;
+    @include respond-to(width_480) {
+        padding-top: 15px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -76,12 +85,15 @@ a{
 }
 .l-layout__border {
     position: absolute;
-    z-index: 1;
-    right: 35.4%;
+    z-index: 3;
+    right: 340px;
     top: 0;
     bottom: 0;
     width: 10px;
     background: url(../img/sidebar-border.png) 0 0 repeat-y;
+    @include respond-to(width_920) {
+        display: none;
+    }
 }
 .wrapper {
     overflow: hidden;
@@ -108,20 +120,34 @@ a{
     .l-container {
         @include clr;
     }
+    @include respond-to(width_920) {
+        padding: 14px 5px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 61px;
+        @include box-sizing(border-box);
+    }
 }
 .logo {
     @extend %hide-text;
     float: left;
-    margin-right: 100px;
+    margin-right: 4%;
     @include sized-sprite($icons, logo);
+    @include respond-to(width_320) {
+        margin-right: 30px;
+    }
 }
 .menu {
-    @include clr;
+    position: relative;
     float: left;
-    padding-top: 5px;
+    width: 54%;
+    padding-top: 7px;
+    text-align: center;
     li {
-        float: left;
-        margin-right: 38px;
+        display: inline-block;
+        margin-right: 4%;
     }
     .is-active {
         a {
@@ -132,15 +158,97 @@ a{
             }
         }
     }
+    @include respond-to(width_920) {
+        width: auto;
+        white-space: nowrap;
+        .menu__key {
+            display: block;
+        }
+        ul {
+            display: none;
+            position: absolute;
+            top: 47px;
+            background: #fff;
+            padding: 10px 0;
+            border: 1px solid #d6d4d2;
+            border-top: 0;
+            text-align: left;
+        }
+        li {
+            display: block;
+            margin: 0 0 4px;
+        }
+        a {
+            display: block;
+            padding: 0 20px;
+        }
+    }
+}
+.menu__key {
+    display: none;
+    background: none;
+    @include b;
+    font-size: 14px;
+    color: #5e564e;
+    i {
+        display: inline-block;
+        margin-right: 7px;
+        @include sized-sprite($icons, plus);
+    }
+    @include respond-to(width_480) {
+        span {
+            display: none;
+        }
+    }
 }
 .search {
+    position: relative;
+    margin-right: 20px;
     float: right;
-    padding-top: 4px;
+    padding-top: 6px;
     .input {
         display: inline-block;
         width: 140px;
         vertical-align: middle;
         @include placeholder(#aeaaa6, 'Raleway', 400);
+    }
+    @include respond-to(width_920) {
+        .search__key {
+            display: block;
+        }
+        div {
+            display: none;
+            position: absolute;
+            top: 47px;
+            right: 0;
+            width: 162px;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #d6d4d2;
+            border-top: 0;
+            text-align: left;
+        }
+    }
+}
+.search__key {
+    display: none;
+    background: none;
+    @include b;
+    font-size: 14px;
+    color: #5e564e;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        @include sized-sprite($icons, glass);
+    }
+    span {
+        vertical-align: middle;
+    }
+    @include respond-to(width_480) {
+        span {
+            display: none;
+        }
     }
 }
 .search__btn {
@@ -148,6 +256,42 @@ a{
     @extend %hide-text;
     @include sized-sprite($icons, glass);
 }
+
+.sidebar-key {
+    float: right;
+    margin-right: 20px;
+    display: none;
+    color: #fff;
+    @include b;
+    font-size: 14px;
+    padding: 5px 7px;
+    @include respond-to(width_920) {
+        display: block;
+        background: #97be0f;
+        i {
+            margin-right: 4px;
+            vertical-align: middle;
+            display: inline-block;
+            @include sized-sprite($icons, list);
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+    @include respond-to(width_480) {
+        background: none;
+        span {
+            display: none;
+        }
+        i {
+            @include sized-sprite($icons, list2);
+        }
+    }
+    @include respond-to(width_320) {
+        margin-right: 0;
+    }
+}
+
 /* -------------------------------------- //END Header ------------------------------------------ */
 
 /* ------------------------------------- Independent blocks -------------------------------------- */
@@ -155,6 +299,10 @@ a{
     width: 62.5%;
     float: left;
     @include box-sizing(border-box);
+    @include respond-to(width_920) {
+        padding: 0 5px;
+        width: 100%;
+    }
 }
 
 .title-l-1 {
@@ -282,12 +430,19 @@ a{
     }
 }
 
-.post-wrap, .l-col {
+.l-col {
     float: right;
     width: 48%;
+    @include respond-to(width_480) {
+        width: 100%;
+        float: none;
+    }
     &:first-child {
         float: left;
     }
+}
+.post-wrap {
+    @include clr;
 }
 .post-wrap_mod {
     .post__title {
@@ -301,9 +456,14 @@ a{
     .post {
         float: left;
         width: 31%;
-        margin-left: 3%;
         &:first-child {
             margin-left: 0;
+        }
+        @include respond-to(width_920) {
+            width: 31%;
+        }
+        @include respond-to(width_600) {
+            width: 48%;
         }
     }
     .post__main {
@@ -311,14 +471,32 @@ a{
     }
     .post__title {
         font-size: 18px;
+        @include respond-to(width_920) {
+            font-size: 18px;
+        }
+        @include respond-to(width_600) {
+            font-size: 16px;
+        }
+        @include respond-to(width_320) {
+            font-size: 14px;
+        }
     }
     
 }
 .post {    
-    margin: 0 0 7.3%;
+    float: left;
+    width: 48%;
+    margin: 0 2% 3% 0;
+    overflow: hidden;
     @include transition(all 200ms linear);
+    @include respond-to(width_920) {
+        width: 31%;
+    }
+    @include respond-to(width_600) {
+        width: 48%;
+    }
     &:hover {
-        position: relative;
+        position: relative;  
         z-index: 2;
         @include box-shadow(0 0 10px rgba(94,86,78,.5));
         a {
@@ -328,10 +506,13 @@ a{
             @include opacity(1);
         }
     }
+    // &:nth-child(2n) {
+    //     float: right;
+    // }
     img {
         display: block;
-        width: 100%;
-        height: auto;
+        //width: 100%;
+        //height: auto;
     }
     a {
         display: block;
@@ -360,7 +541,15 @@ a{
     font-size: 24px;
     @include n;
     line-height: 1.4;
-
+    @include respond-to(width_920) {
+        font-size: 18px;
+    }
+    @include respond-to(width_600) {
+        font-size: 16px;
+    }
+    @include respond-to(width_320) {
+        font-size: 14px;
+    }
 }
 .post__author {
     display: block;
@@ -393,6 +582,10 @@ a{
             color: #5e564e;
             text-decoration: none;
         }
+        @include respond-to(width_600) {
+            font-size: 16px;
+        }
+        
     }
     .is-active {
         background: #97be0f;
@@ -410,8 +603,18 @@ a{
     display: inline-block;
     width: 48%;
     margin-bottom: 3.7%;
+    @include respond-to(width_600) {
+        width: 44%;
+    }
+    @include respond-to(width_320) {
+        float: none;
+        width: 100%;
+    }
     &:nth-child(2n) {
         margin-left: 3.2%;
+        @include respond-to(width_320) {
+            margin-left: 0;
+        }
     }
     img {
         float: left;
@@ -438,12 +641,18 @@ a{
     color: #aeaaa6;
     overflow: hidden;
     @include b;
+    @include respond-to(width_600) {
+        font-size: 12px;
+    }
 }
 .expert__name {
     display: block;
     @include m;
     font-size: 18px;
     color: #5e564e;
+    @include respond-to(width_600) {
+        font-size: 14px;
+    }
 }
 .expert_vertical {
     .expert__item {
@@ -556,6 +765,9 @@ a{
     cursor: pointer;
     color: #aeaaa6;
     font-size: 18px;
+    @include respond-to(width_600) {
+        font-size: 14px;
+    }
     @include box-sizing(border-box);
     @include b;
     &:after {
@@ -592,11 +804,17 @@ a{
         &:hover {
             color: #97be0f;
         }
+        @include respond-to(width_600) {
+            font-size: 14px;
+        }
     }
 }
 
 .drop-list-wrap_width {
     width: 65%;
+    @include respond-to(width_480) {
+        width: 100%;
+    }
     .drop-list {
         width: 48%;
         &:first-child {
@@ -641,7 +859,7 @@ a{
 }
 .comments__main {
     overflow: hidden;
-    padding: 0 0 1px 2%;
+    padding: 0 0 1px 10px;
 }
 .comments__main-wrap {
     position: relative;
@@ -747,6 +965,10 @@ a{
     padding-bottom: 39px;
     width: 50%;
     @include box-sizing(border-box);    
+    @include respond-to(width_480) {
+        float: none;
+        width: 100%;
+    }
 }
 .footer__title {
     display: block;
@@ -766,6 +988,7 @@ a{
     .btn {
         float: left;
         width: 28%;
+        padding: 0;
     }
 }
 .soc {
@@ -892,3 +1115,59 @@ a{
     border-top: 1px solid #d6d4d2;
 }
 /* -------------------------------------- //END Footer ------------------------------------------- */
+
+.wrapper-baron {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    .container {
+        margin-right: 20px;
+    }
+}
+.scroller {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    /* uncomment to accelerate scrolling on iOs */
+}
+.scroller::-webkit-scrollbar {
+    width: 0;
+}
+.scroller__bar-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    bottom: 10px;
+    right: 5px;
+    width: 8px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+.baron {
+    .scroller__bar-wrapper {
+        display: block;
+    }
+}
+.scroller__bar {
+    position: absolute;
+    z-index: 1;
+    width: 6px;
+    border-radius: 3px;
+    background: #aeaaa6;
+    -webkit-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+    pointer-events: auto;
+}
+.scroller__bar:hover {
+    opacity: .8;
+}
+.baron .scroller__bar {
+    opacity: .6;
+}
+.baron_h .scroller__bar_h {
+    opacity: .6;
+    bottom: 30px;
+}

@@ -3,7 +3,7 @@
 @import "lib/keyframes";
 @import "lib/media";
 @import "lib/ceaser-easing/ceaser";
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,500,700);
+//@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,500,700);
 // gradients for ie
 $experimental-support-for-svg: true;
 
@@ -11,11 +11,27 @@ $experimental-support-for-svg: true;
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 
 // responsive
-$break-small: 500px;
-$break-large: 1180px;
+$break-min: 320px;
+$break-lan: 480px;
+$break-small: 600px;
+$break-big: 920px;
+$break-static: 960px;
+$break-large: 1260px;
 @mixin respond-to($media) {
-  @if $media == pda {
+  @if $media == width_320 {
+    @media only screen and (max-width: $break-min) { @content; }
+  }
+  @else if $media == width_480 {
+    @media only screen and (max-width: $break-lan) { @content; }
+  }
+  @else if $media == width_600 {
     @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == width_920 {
+    @media only screen and (max-width: $break-big) { @content; }
+  }
+  @else if $media == width_960 {
+    @media only screen and (max-width: $break-static) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large) { @content; }

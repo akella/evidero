@@ -10,6 +10,8 @@
     <script src="js/jquery.cycle2.min.js"></script>
     <script src="js/jquery.cycle2.carousel.min.js"></script>
     <script src="js/jquery.cycle2.swipe.min.js"></script>
+    <script src="js/jquery.masonry.js"></script>
+    <script src="js/baron.full.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -21,6 +23,7 @@
     <div class="l-container">
         <a href="#" class="logo">Evidero</a>
         <nav class="menu">
+            <button class="menu__key js-menu-key"><i></i><span>Menü</span></button>
             <ul>
                 <li><a href="#">bewegen</a></li>
                 <li><a href="#">denken</a></li>
@@ -29,9 +32,15 @@
                 <li><a href="#">verändern</a></li>                        
             </ul>
         </nav>
+        <button class="sidebar-key js-sidebar-key">
+            <i></i><span>Leiste</span>
+        </button>
         <div class="search">
-            <input class="input" type="text" placeholder="Suche ...">
-            <input class="search__btn" type="submit" value="Go">
+            <button class="js-search-key search__key"><i></i><span>Suche</span></button>
+            <div>
+                <input class="input" type="text" placeholder="Suche ...">
+                <input class="search__btn" type="submit" value="Go">
+            </div>
         </div>
     </div>
 </header>
@@ -124,143 +133,152 @@
     </div>
     <!-- END Main -->
     <!-- BEGIN sidebar -->
-    <aside class="sidebar">
-        <ul class="tab">
-            <li data-tab=".js-tab1"><i class="icon icon_clock"></i><span>AKTUELL</span></li>
-            <li data-tab=".js-tab2"><i class="icon icon_heard"></i><span>BELIEBT</span></li>
-            <li data-tab=".js-tab3"><i class="icon icon_man"></i><span>EXPERTEN</span></li>
-        </ul>
-        <div class="tab-cont js-tab1">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-        <div class="tab-cont js-tab2">
-            <ul class="pop-list">
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+    <aside class="sidebar js-sidebar">
+        <div class="wrapper-baron js-baron">
+            <div class="scroller">
+                <div class="container">
+                    <ul class="tab">
+                        <li data-tab=".js-tab1"><i class="icon icon_clock"></i><span>AKTUELL</span></li>
+                        <li data-tab=".js-tab2"><i class="icon icon_heard"></i><span>BELIEBT</span></li>
+                        <li data-tab=".js-tab3"><i class="icon icon_man"></i><span>EXPERTEN</span></li>
+                    </ul>
+                    <div class="tab-cont js-tab1">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    <div class="tab-cont js-tab2">
+                        <ul class="pop-list">
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                        </ul>
                     </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    <div class="tab-cont js-tab3">
+                        <!-- BEGIN Expert -->
+                        <ul class="expert expert_vertical">
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- END Expert -->
                     </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                    <div class="scroller__bar-wrapper">
+                        <div class="scroller__bar"></div>
                     </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-            </ul>
-        </div>
-        <div class="tab-cont js-tab3">
-            <!-- BEGIN Expert -->
-            <ul class="expert expert_vertical">
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <!-- END Expert -->
+                </div>
+            </div>
         </div>
     </aside>
     <!-- END sidebar -->
-    <i class="l-layout__border"></i>
+    <i class="l-layout__border js-border"></i>
 </div>
 </body>
 </html>

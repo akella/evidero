@@ -10,6 +10,8 @@
     <script src="js/jquery.cycle2.min.js"></script>
     <script src="js/jquery.cycle2.carousel.min.js"></script>
     <script src="js/jquery.cycle2.swipe.min.js"></script>
+    <script src="js/jquery.masonry.js"></script>
+    <script src="js/baron.full.js"></script>
     <script src="js/common.js"></script>  
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
@@ -21,17 +23,24 @@
     <div class="l-container">
         <a href="#" class="logo">Evidero</a>
         <nav class="menu">
+            <button class="menu__key js-menu-key"><i></i><span>Menü</span></button>
             <ul>
                 <li><a href="#">bewegen</a></li>
                 <li><a href="#">denken</a></li>
                 <li><a href="#">erholen</a></li>
-                <li class="is-active"><a href="#">essen & trinken</a></li>
+                <li><a href="#">essen & trinken</a></li>
                 <li><a href="#">verändern</a></li>                        
             </ul>
         </nav>
+        <button class="sidebar-key js-sidebar-key">
+            <i></i><span>Leiste</span>
+        </button>
         <div class="search">
-            <input class="input" type="text" placeholder="Suche ...">
-            <input class="search__btn" type="submit" value="Go">
+            <button class="js-search-key search__key"><i></i><span>Suche</span></button>
+            <div>
+                <input class="input" type="text" placeholder="Suche ...">
+                <input class="search__btn" type="submit" value="Go">
+            </div>
         </div>
     </div>
 </header>
@@ -85,60 +94,54 @@
             <p>Der Frühling steht vor der Tür. Wird bei warmen Wetter eigentlich noch heißer    Kaffee getrunken? Und wieviel darf ein guter Kaffee kosten? evidero-Experte und Barista Andreas Heitkamp gibt Antworten.
             </p>
         </div>
-        <div class="wrap">
-            <!-- BEGIN Posts -->
-            <ul class="post-wrap">
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <span class="categ-name">ERNÄHRUNG</span>
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren</a>
-                        </h2>
-                    </div>
-                </li>
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <span class="categ-name">ERNÄHRUNG</span>
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
-                        </h2>
-                    </div>
-                </li>
-            </ul>
-            <!-- BEGIN Posts -->
-            <!-- BEGIN Posts -->
-            <ul class="post-wrap">
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <span class="categ-name">ERNÄHRUNG</span>
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
-                        </h2>
-                    </div>
-                </li>
-                <li class="post">
-                    <a href="#">
-                        <img src="http://lorempixel.com/290/163/food" alt="">
-                    </a>
-                    <div class="post__main">
-                        <span class="categ-name">ERNÄHRUNG</span>
-                        <h2 class="post__title">
-                            <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
-                        </h2>
-                    </div>
-                </li>
-            </ul>
-            <!-- BEGIN Posts -->
-        </div>
+        <!-- BEGIN Posts -->
+        <ul class="post-wrap js-masonry">
+            <li class="post js-masonry-post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="" width="290" height="163">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">ERNÄHRUNG</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren</a>
+                    </h2>
+                </div>
+            </li>
+            <li class="post js-masonry-post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="" width="290" height="163">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">ERNÄHRUNG</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+            <li class="post js-masonry-post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="" width="290" height="163">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">ERNÄHRUNG</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+            <li class="post js-masonry-post">
+                <a href="#">
+                    <img src="http://lorempixel.com/290/163/food" alt="" width="290" height="163">
+                </a>
+                <div class="post__main">
+                    <span class="categ-name">ERNÄHRUNG</span>
+                    <h2 class="post__title">
+                        <a href="#">Besser kommunizieren — mit roten und grünen Chips</a>
+                    </h2>
+                </div>
+            </li>
+        </ul>
+        <!-- END Posts -->
         <!-- BEGIN Pagin -->
         <div class="pagin">
             <a href="#" class="pagin__prev">&lt;</a>
@@ -221,6 +224,7 @@
                 data-cycle-fx=carousel
                 data-cycle-slides="> a"
                 data-cycle-timeout=0
+        data-cycle-swipe=true
                 data-cycle-carousel-visible=3
                 data-cycle-next=".js-next-theme"
                 data-cycle-prev=".js-prev-theme"
@@ -334,237 +338,246 @@
     </div>
     <!-- END Main -->
     <!-- BEGIN sidebar -->
-    <aside class="sidebar">
-        <ul class="tab">
-            <li data-tab=".js-tab1"><i class="icon icon_clock"></i><span>AKTUELL</span></li>
-            <li data-tab=".js-tab2"><i class="icon icon_heard"></i><span>BELIEBT</span></li>
-            <li data-tab=".js-tab3"><i class="icon icon_man"></i><span>EXPERTEN</span></li>
-        </ul>
-        <div class="drop-list-wrap">
-            <div class="drop-list">
-                <div class="drop-list__head js-drop-list">
-                    <span>Was</span>
-                </div>
-                <div class="drop-list__body js-drop-body">
-                    <p>Ihr Posteitzahlgebiet:</p>
-                    <ul>
-                        <li>0-1</li>
-                        <li>5-6</li>
-                        <li>1-2</li>
-                        <li>6-7</li>
-                        <li>2-3</li>
-                        <li>7-8</li>
-                        <li>3-4</li>
-                        <li>8-9</li>
-                        <li>4-5</li>
+    <aside class="sidebar js-sidebar">
+        <div class="wrapper-baron js-baron">
+            <div class="scroller">
+                <div class="container">
+                    <ul class="tab">
+                        <li data-tab=".js-tab1"><i class="icon icon_clock"></i><span>AKTUELL</span></li>
+                        <li data-tab=".js-tab2"><i class="icon icon_heard"></i><span>BELIEBT</span></li>
+                        <li data-tab=".js-tab3"><i class="icon icon_man"></i><span>EXPERTEN</span></li>
                     </ul>
+                    <div class="drop-list-wrap">
+                        <div class="drop-list">
+                            <div class="drop-list__head js-drop-list">
+                                <span>Was</span>
+                            </div>
+                            <div class="drop-list__body js-drop-body">
+                                <p>Ihr Posteitzahlgebiet:</p>
+                                <ul>
+                                    <li>0-1</li>
+                                    <li>5-6</li>
+                                    <li>1-2</li>
+                                    <li>6-7</li>
+                                    <li>2-3</li>
+                                    <li>7-8</li>
+                                    <li>3-4</li>
+                                    <li>8-9</li>
+                                    <li>4-5</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="drop-list">
+                            <div class="drop-list__head js-drop-list">
+                                <span>Wo</span>
+                            </div>
+                            <div class="drop-list__body js-drop-body">
+                                <p>Ihr Posteitzahlgebiet:</p>
+                                <ul>
+                                    <li>0-1</li>
+                                    <li>5-6</li>
+                                    <li>1-2</li>
+                                    <li>6-7</li>
+                                    <li>2-3</li>
+                                    <li>7-8</li>
+                                    <li>3-4</li>
+                                    <li>8-9</li>
+                                    <li>4-5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-cont js-tab1">
+                    </div>
+                    <div class="tab-cont js-tab2">
+                        <ul class="pop-list">
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                            <li class="pop">
+                                <div class="pop__main">
+                                    <span class="categ-name">KOMMUNIKATION</span>
+                                    <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
+                                </div>
+                                <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-cont js-tab3">
+                        <!-- BEGIN Expert -->
+                        <ul class="expert expert_vertical">
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="expert__item">
+                                <a href="#" class="expert__link">
+                                    <img src="http://lorempixel.com/80/80/people" alt="">
+                                    <div class="expert__main">
+                                        <strong class="expert__name">Burkhard Hirsch</strong>
+                                        FDP-Politiker
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- END Expert -->
+                    </div>
+                    <a href="#" class="banner">
+                        <img src="http://lorempixel.com/300/250/food" alt="">
+                    </a>
+                    <h2 class="title">
+                        <i class="icon icon_earth"></i><span>WOHLFÜHLREISEN</span>
+                    </h2>
+                    <ul class="post-sidebar-wrap">
+                        <li class="post-sidebar">
+                            <a href="#">
+                                <img src="http://lorempixel.com/300/168/food" alt="">
+                            </a>
+                            <h3 class="post-sidebar__title">
+                                <a href="#">Yoga und Surfen in Portugal</a>
+                            </h3>
+                            <div class="post-sidebar__descr">
+                                <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
+                            </div>
+                        </li>
+                        <li class="post-sidebar">
+                            <a href="#">
+                                <img src="http://lorempixel.com/300/168/food" alt="">
+                            </a>
+                            <h3 class="post-sidebar__title">
+                                <a href="#">Yoga und Surfen in Portugal</a>
+                            </h3>
+                            <div class="post-sidebar__descr">
+                                <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2 class="title">
+                        <i class="icon icon_calendar"></i><span>EVENTS UND SEMINARE</span>
+                    </h2>
+                    <ul class="post-sidebar-wrap">
+                        <li class="post-sidebar">
+                            <h3 class="post-sidebar__title">
+                                <a href="#">Yoga und Surfen in Portugal</a>
+                            </h3>
+                            <div class="post-sidebar__descr">
+                                <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
+                            </div>
+                        </li>
+                        <li class="post-sidebar">
+                            <h3 class="post-sidebar__title">
+                                <a href="#">Yoga und Surfen in Portugal</a>
+                            </h3>
+                            <div class="post-sidebar__descr">
+                                <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
+                            </div>
+                        </li>
+                        <li class="post-sidebar">
+                            <h3 class="post-sidebar__title">
+                                <a href="#">Yoga und Surfen in Portugal</a>
+                            </h3>
+                            <div class="post-sidebar__descr">
+                                <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="simple-link">Zur Expertensuche</a>
+                    <div class="scroller__bar-wrapper">
+                        <div class="scroller__bar"></div>
+                    </div>
                 </div>
             </div>
-            <div class="drop-list">
-                <div class="drop-list__head js-drop-list">
-                    <span>Wo</span>
-                </div>
-                <div class="drop-list__body js-drop-body">
-                    <p>Ihr Posteitzahlgebiet:</p>
-                    <ul>
-                        <li>0-1</li>
-                        <li>5-6</li>
-                        <li>1-2</li>
-                        <li>6-7</li>
-                        <li>2-3</li>
-                        <li>7-8</li>
-                        <li>3-4</li>
-                        <li>8-9</li>
-                        <li>4-5</li>
-                    </ul>
-                </div>
-            </div>
         </div>
-        <div class="tab-cont js-tab1">
-        </div>
-        <div class="tab-cont js-tab2">
-            <ul class="pop-list">
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-                <li class="pop">
-                    <div class="pop__main">
-                        <span class="categ-name">KOMMUNIKATION</span>
-                        <a href="#">Besser Kommunizieren — mit roten und grünen Chips</a>
-                    </div>
-                    <a href="#"><img src="http://lorempixel.com/90/50/food" alt=""></a>
-                </li>
-            </ul>
-        </div>
-        <div class="tab-cont js-tab3">
-            <!-- BEGIN Expert -->
-            <ul class="expert expert_vertical">
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-                <li class="expert__item">
-                    <a href="#" class="expert__link">
-                        <img src="http://lorempixel.com/80/80/people" alt="">
-                        <div class="expert__main">
-                            <strong class="expert__name">Burkhard Hirsch</strong>
-                            FDP-Politiker
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <!-- END Expert -->
-        </div>
-        <a href="#" class="banner">
-            <img src="http://lorempixel.com/300/250/food" alt="">
-        </a>
-        <h2 class="title">
-            <i class="icon icon_earth"></i><span>WOHLFÜHLREISEN</span>
-        </h2>
-        <ul class="post-sidebar-wrap">
-            <li class="post-sidebar">
-                <a href="#">
-                    <img src="http://lorempixel.com/300/168/food" alt="">
-                </a>
-                <h3 class="post-sidebar__title">
-                    <a href="#">Yoga und Surfen in Portugal</a>
-                </h3>
-                <div class="post-sidebar__descr">
-                    <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
-                </div>
-            </li>
-            <li class="post-sidebar">
-                <a href="#">
-                    <img src="http://lorempixel.com/300/168/food" alt="">
-                </a>
-                <h3 class="post-sidebar__title">
-                    <a href="#">Yoga und Surfen in Portugal</a>
-                </h3>
-                <div class="post-sidebar__descr">
-                    <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
-                </div>
-            </li>
-        </ul>
-        <h2 class="title">
-            <i class="icon icon_calendar"></i><span>EVENTS UND SEMINARE</span>
-        </h2>
-        <ul class="post-sidebar-wrap">
-            <li class="post-sidebar">
-                <h3 class="post-sidebar__title">
-                    <a href="#">Yoga und Surfen in Portugal</a>
-                </h3>
-                <div class="post-sidebar__descr">
-                    <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
-                </div>
-            </li>
-            <li class="post-sidebar">
-                <h3 class="post-sidebar__title">
-                    <a href="#">Yoga und Surfen in Portugal</a>
-                </h3>
-                <div class="post-sidebar__descr">
-                    <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
-                </div>
-            </li>
-            <li class="post-sidebar">
-                <h3 class="post-sidebar__title">
-                    <a href="#">Yoga und Surfen in Portugal</a>
-                </h3>
-                <div class="post-sidebar__descr">
-                    <p>Inhalt des Freitextfeldes mit Datum und Ort</p>
-                </div>
-            </li>
-        </ul>
-        <a href="#" class="simple-link">Zur Expertensuche</a>
     </aside>
     <!-- END sidebar -->
-    <i class="l-layout__border"></i>
+    <i class="l-layout__border js-border"></i>
 </div>
 </body>
 </html>

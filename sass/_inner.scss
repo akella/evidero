@@ -25,11 +25,18 @@
         strong {
             @include b;
         }
+        @include respond-to(width_480) {
+            font-size: 12px;
+        }
     }
     figure {
         float: left;
         width: 49%;
         margin: 0 3.4% 3.4% 0;
+        @include respond-to(width_480) {
+            width: 100%;
+            float: none;
+        }
         img {
             display: block;
             width: 100%;
@@ -55,11 +62,20 @@
         ul {
             float: left;
             width: 45%;
+            @include respond-to(width_480) {
+                width: 100%;
+                float: none;
+                margin-bottom: 15px;
+            }
         }
     }
     .contact {
         float: right;
         width: 48%;
+        @include respond-to(width_480) {
+            width: 100%;
+            float: none;
+        }
     }
     .contact__map {
         margin-bottom: 4%;
@@ -121,6 +137,9 @@
 }
 .info-widget__text {
     overflow: hidden;
+    @include respond-to(width_480) {
+        overflow: visible;
+    }
     .link-bg {
         margin-top: 3%;
     }
@@ -178,17 +197,33 @@
     .icon {
         margin-right: 7px;
     }
+    @include respond-to(width_480) {
+        width: 48.5%;
+    }
 }
 .link-map.is-active {
     background: #97be0f;
 }
+.expert-post-wrap {
+    @include clr;  
+}
 .expert-post {
-    margin-bottom: 3%;
+    float: left;
+    width: 48%;
+    margin: 0 2% 3% 0;
+    overflow: hidden;
     @include box-sizing(border-box);
     border: 1px solid #d6d4d2;
     @include transition(all 200ms linear);
     &:hover {
         @include box-shadow(0 0 10px rgba(94,86,78,.5));
+    }
+    @include transition(all 200ms linear);
+    @include respond-to(width_920) {
+        width: 31%;
+    }
+    @include respond-to(width_600) {
+        width: 48%;
     }
 }
 .expert-post__head {
@@ -206,6 +241,9 @@
     a {
         font-size: 18px;
         color: #fff;
+        @include respond-to(width_600) {
+            font-size: 16px;
+        }
     }
 }
 .expert-post__body {
@@ -241,6 +279,7 @@
 }
 
 .map {
+    display: none;
     iframe {
         display: block;
     }
@@ -300,6 +339,9 @@
     color: #fff;
     background: #aeaaa6;
     @include transition(all 200ms linear);
+    @include respond-to(width_480) {
+        font-size: 11px;
+    }
     &:hover {
         text-decoration: none;
         background: #97be0f;
@@ -359,6 +401,20 @@
         margin-bottom: 10px;
         width: 100%;
         height: auto;
+    }
+    @include respond-to(width_600) {
+        float: none;
+        margin-bottom: 20px;
+        width: 100%;
+        @include clr;
+        img {
+            float: left;
+            margin-right: 20px;
+            width: auto;
+        }
+        .soc_vert {
+            float: left;
+        }
     }
 }
 .expert-cont__right {

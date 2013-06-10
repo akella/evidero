@@ -3,14 +3,24 @@
     position: relative;
     z-index: 2;
     float: right;
-    width: 340px;
-    padding: 0 20px;
-    @include box-sizing(border-box);
+    width: 320px;
+    height: 100%;
+    padding: 0 0 0 20px;
+    //@include box-sizing(border-box);
+    @include transition(all 100ms linear);
     background: #fff;
+    @include respond-to(width_920) {
+        position: fixed;
+        top: 61px;
+        bottom: 0;
+        right: -340px;
+        z-index: 100;
+    }
     .drop-list__head {
         border-top: 0;
     }
 }
+
 .banner {
     display: block;
     margin: 13% 0;
